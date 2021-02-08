@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;1,300;1,400;1,500;1,600;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&family=Hind+Siliguri:wght@300&display=swap');
+:root{
+    --size-title-section: 2.5rem;
+    --margin-title-section: 2rem 0;
+    --aling-title-section: center;
+    --color-black: #000;
+    --color-hover-nav:#525252;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+/* Header ******************************/
+header{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 2rem;
+    background: none;
+    position: sticky;
+    z-index:1;
+    top: 0;
+    left: 0;
+    transition: all 500ms;
+}
+header .menu{
+    display: none;
+}
+header > a{
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+}
+header > a:before{
+    content: ' ';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    margin-left: 10%;
+    animation: scale 2s;
+}
+
+header nav a{
+    margin-left: .5rem;
+    color: #fff;
+    position: relative;
+}
+header nav a:hover::before{
+    content: ' ';
+    position: absolute;
+    width: 80%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    margin-left: 10%;
+    animation: scale 500ms;
+}
+header.active{
+    background-color: #454545;
+}
+header.active a{
+    color: #fff;
+}
+header.active nav a{
+    color: #fff;
+}
+[id]{
+    scroll-margin-top: 4rem;
+}
+@keyframes scale{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+/* banner/hero ******************************/
+.hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url(./../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -3rem;
+}
+.hero > div{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00000021;    
+}
+.hero span{
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Herr Von Muellerhoff', cursive;
+    animation: scale 3s;
+}
+.hero h1{
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;
+    animation: scale 2s;
+}
+.title-section{
+    text-align: var(--aling-title-section);
+    font-size: var(--size-title-section);
+    margin: var(--margin-title-section);
+}
+
+/* About ******************************/
+.about-cont-inf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-inf{
+    width: 45%;
+}
+.about-img{
+    width: 45%;
+    height: 400px;
+}
+
+/* Products start ******************************/
+
+/* Titulos y subtitulos de las subsecciones  *******************/
+.products-title{
+    font-size: 1.5rem;
+    text-align: center;
+}
+.products-sub-title{
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    color: #5252528d;
+}
+.products{
+    margin: 0 auto;
+    width: 90%;
+}
+/* Price *******************/
+.product{
+    position: relative;
+}
+.product .price {
+    position: absolute;
+    right: -5px;
+    bottom: 20px;
+    padding: .3rem .5rem;
+    background-color: #ffffffd6;
+    border-radius: .3rem;
+}
+/* Price *******************/
+/* Nombre del producto *******************/
+.product .product-name{
+    text-align: center;
+    display: block;
+}
+/* Nombre del producto *******************/
+
+.products-start{
+    margin-bottom: 2rem;;
+}
+.container-products-start{
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-products-start .product{
+    overflow: hidden;
+
+}
+/**Todos los productos*/
+.product{
+    width: calc(100% / 3 - 20px);
+    margin: calc(20px / 2);
+    min-height: 210px;
+    max-height: 270px;
+}
+
+
+.container-products-start .product .products{
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+}
+.product-img{
+    width: 100%;
+    height: calc(100% - 25px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+/* Products start img ******************************
+.container-products-start .product .product-img-start-1{
+    background-image: url(./../img/ice-1786311_1280.jpg);
+}
+.container-products-start .product .product-img-start-2{
+    background-image: url(./../img/waffle-4608843_1280.jpg);
+}
+.container-products-start .product .product-img-start-3{
+    background-image: url(./../img/bowl-1932375_1280.jpg);
+}
+/
+/* More products ******************************/
+
+.container-products-more{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* More products img ******************************
+.container-products-more .product .product-img-more-1{
+    background-image: url(./../img/cheesecake-2059932_1280.jpg);
+}
+.container-products-more .product .product-img-more-2{
+    background-image: url(./../img/muffin-3607780_1280.jpg);
+}
+.container-products-more .product .product-img-more-3{
+    background-image: url(./../img/dessert-1283822_1280.jpg);
+}
+.container-products-more .product .product-img-more-4{
+    background-image: url(./../img/cake-2459931_1280.jpg);
+}
+/
+/* Open hour ******************************/
+.hour{
+    margin-top: 2rem;
+}
+.hour .list-hours{
+    width: 50%;
+    margin: 0 auto;
+}
+.hour .list-hours .elemt-list:nth-child(even){
+    background-color: rgba(211, 211, 211, 0.394);
+}
+.hour .list-hours .elemt-list{
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hour .list-hours .elemt-list.active{
+    background-color: #c4c4c4;;
+}
+/* Ubicaton ******************************/
+.ubication .map{
+    display: block;
+    width: 100%;
+}
+/* Contact ******************************/
+.contact{
+    width: 90%;
+    margin: 0 auto 2rem auto;
+}
+.container-contact{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container-contact .data .ubication > p,
+.container-contact .data .tel > p{
+    margin-left: 2rem;
+}
+.container-contact .ubication {
+    display: flex;
+    flex-direction: column;
+}
+.container-contact .ubication i{
+    font-size: 1.5rem;
+    margin-right: .6rem;
+}
+.container-contact .ubication p{
+    font-size: 1rem;
+}
+.container-contact .container-follow a{
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    color: #0049bb;
+}

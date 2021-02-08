@@ -1,0 +1,84 @@
+@media (max-width: 1032px){
+    .about-img {
+        width: 44%;
+        height: 350px;
+    }
+
+}
+@media (max-width: 886px){
+    .about-inf {
+        width: 50%;
+        margin-right: .3rem;
+    }
+    .about-img {
+        width: 40%;
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 800px){
+.product{
+    min-width: 250px;
+    width: calc(100% / 2 - 20px);
+}
+header > a{
+    font-size: 1.2rem;
+}
+header .menu{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 1rem;
+    cursor: pointer;
+}
+header nav{
+    width: 70%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #000;
+    transform: translateX(100%);
+    transition: all 500ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header nav a{
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+}
+header nav.active{
+    transform: translateX(0%);
+}
+}
+
+@media (max-width: 690px){
+    .products .title-section{
+        margin-bottom: .5rem;
+    }
+    .about-inf {
+        width: 80%;
+        margin-right: 0;
+        text-align: center;
+    }
+    .about-img {
+    display: none;
+    }
+    .hour .list-hours {
+        width: 70%;
+    }
+}
+@media (max-width: 600px){
+    .product{
+        width: 80%;
+        margin: 20px auto 20px auto;
+    }
+}
+@media (max-width: 400px){
+    .product{
+        width: 95%;
+    }
+}
