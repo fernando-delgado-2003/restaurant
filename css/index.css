@@ -296,6 +296,8 @@ header.active nav a{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 450px;
+    transition: all 1s;
 }
 .container-map p{
     font-size: 2rem;
