@@ -292,29 +292,7 @@ header.active nav a{
     display: block;
     width: 100%;
 }
-.container-map{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 450px;
-    transition: all 1s;
-}
-.container-map p{
-    font-size: 2rem;
-}
-.loader{
-    margin-left: .5rem;
-    animation: loader infinite 2s linear;
-}
-@keyframes loader {
-    from{
-        transform: rotate(0deg)
-    }
-    to{
-        transform: rotate(360deg)
-    }
 
-}
 /* Contact ******************************/
 .contact{
     width: 90%;
