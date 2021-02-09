@@ -274,15 +274,49 @@ header.active nav a{
 .hour .list-hours .elemt-list.active{
     background-color: #c4c4c4;;
 }
+.hour .list-hours .elemt-list .open-closed{
+    position: relative;
+}
+.message{
+    position: absolute;
+    font-size: .7rem;
+    top: -11px;
+    right: 0;
+    display: none;
+}
+.message.active{
+    display: block;
+}
 /* Ubicaton ******************************/
 .ubication .map{
     display: block;
     width: 100%;
 }
+.container-map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-map p{
+    font-size: 2rem;
+}
+.loader{
+    margin-left: .5rem;
+    animation: loader infinite 2s linear;
+}
+@keyframes loader {
+    from{
+        transform: rotate(0deg)
+    }
+    to{
+        transform: rotate(360deg)
+    }
+
+}
 /* Contact ******************************/
 .contact{
     width: 90%;
-    margin: 0 auto 2rem auto;
+    margin: 2rem auto;
 }
 .container-contact{
     display: flex;
